@@ -9,25 +9,6 @@
             </div>
         </article>
 
-        <table>
-          <tr>
-            <th>name</th>
-            <th>maintainers</th>
-            <th>description</th>
-            <th>plugin types</th>
-          </tr>
-          {{ range .Site.Data.nornir.plugins.repositories }}
-          <tr>
-            <td><a href="{{ .url }}">{{ .name }}</a></td>
-            <td>{{ .maintainer|markdownify }}</td>
-            <td>{{ .description|markdownify }}</td>
-            <td>{{ range .plugin_types}} {{ . }} {{ end }}</td>
-          </tr>
-          {{ end }}
-        </table>
-
-
-
       </div>
     </main>
 {{ end }}
